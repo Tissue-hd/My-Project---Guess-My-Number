@@ -4,6 +4,7 @@ let secretNumber = Math.trunc(Math.random()*10) + 1;
 console.log(secretNumber);
 
 let score = 10;
+let highscore = 0;
 
 let displayMessage = function (message) {
     document.querySelector('.message').textContent = message;
@@ -22,9 +23,15 @@ document.querySelector('.check').addEventListener('click', function () {
     // if guess is correct
     else if (guess === secretNumber) {
         displayMessage('🎉 သင့်ရဲ့ခန့်မှန်းချက် မှန်ကန်သွားပါပြီ 🎉');
+        document.querySelector(".number").textContent = secretNumber;
 
         document.querySelector('.message').style.fontSize = 'x-large';
         document.querySelector('body').style.backgroundColor = '#60b347';
+
+        if (score > highscore) {
+            highscore = score;
+            document.querySelector('.highscore').textContent = highscore;
+          }
     }
 
     // if guess is incorrect
