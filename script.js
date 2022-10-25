@@ -64,7 +64,8 @@ document.querySelector('.again').addEventListener('click', function () {
     secretNumber = Math.trunc(Math.random()*10) + 1;
     score = 10;
 
-    document.querySelector('.message').textContent = 'စတင် ခန့်မှန်းပါ'
+    document.querySelector('.message').textContent = 'စတင် ခန့်မှန်းပါ';
+    document.querySelector('.number').textContent = "?";
     document.querySelector('.score').textContent = score;
     document.querySelector('.guess').value = '';
 
