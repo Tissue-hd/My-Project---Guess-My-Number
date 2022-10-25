@@ -31,7 +31,7 @@ document.querySelector('.check').addEventListener('click', function () {
         if (score > highscore) {
             highscore = score;
             document.querySelector('.highscore').textContent = highscore;
-          }
+        }
     }
 
     // if guess is incorrect
@@ -62,7 +62,7 @@ document.querySelector('.check').addEventListener('click', function () {
 
 document.querySelector('.again').addEventListener('click', function () {
     secretNumber = Math.trunc(Math.random()*10) + 1;
-    score = 20;
+    score = 10;
 
     document.querySelector('.message').textContent = 'စတင် ခန့်မှန်းပါ'
     document.querySelector('.score').textContent = score;
